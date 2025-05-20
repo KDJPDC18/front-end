@@ -511,7 +511,7 @@ if (!cart.length) {
 
 // After successful checkout and before showing the digital receipt
 function sendOrderToBackend(orderData) {
-    fetch('http://localhost:3001/save-order', {
+    fetch('https://backend-rkyn.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
