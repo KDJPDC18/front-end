@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayle Brews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Prototype2.css">
+    <link rel="stylesheet" href="atmedia.css">
+    <!--<script src="Prototype2.jsx"></script>-->
+    <script src="Prototype2.js" defer></script>
+    <script src="Flavor Option.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+     <a name="home"></a>
+    <header>
+        <div class="top-bar">
+            Free shipping on orders over ₱300
+        </div>
+        <div class="main-header">
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <a href="#" class="logo">KAYLE <span>BREWS</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#home" >Home</a></li>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                    <li><a href="customer support.html">Customer Support</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Kayle Brews Offers<br>Cold Brew & Conversation</h1>
+            <p>Discover our handcrafted coffee blends and delicious snacks made with love</p>
+            <a href="Menu.html" class="btn" id="view-menu-btn">View Menu</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <h2 class="section-title">Our Best Sellers</h2>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="spanish.jpg" alt="Coffee">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Spanish Latte</h3>
+                    <div class="product-price"></div>
+                    <a href="Menu.html" class="btn order-now-btn">Order Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="Matcha1.png" alt="Coffee">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Matcha</h3>
+                    <div class="product-price"></div>
+                    <a href="Menu.html" class="btn order-now-btn">Order Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="Green Apple.jpg" alt="Coffee">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Greenapple</h3>
+                    <div class="product-price"></div>
+                    <a href="Menu.html" class="btn order-now-btn">Order Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="barbeque fries.png" alt="Coffee" >
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">French Fries (Chili BBQ)</h3>
+                    <div class="product-price"></div>
+                    <a href="Menu.html" class="btn order-now-btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <a name="about"></a>
+    <section class="about">
+        <h2 class="section-title">Our Story</h2>
+        <div class="about-content">
+            <p>Kayle Brews began its journey in May 2024, brewed from the passion of a young coffee enthusiast, Kyle Suarez. With a deep love for coffee and a dream to create a cozy space for everyone to enjoy, Kyle brought his favorite brewing method—Cold Brew—to the forefront of his menu. </p>
+            <p>What started as a small idea quickly grew into a vibrant coffee spot where every cup is crafted with care and character. At Kayle Brews, we serve more than just drinks, we serve comfort, connection, and a little bit of Kyle’s story in every sip.</p>
+            <div style="text-align:center;">
+                <a href="aboutus.html" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <a name="locations"></a>
+    <!-- Locations Section -->
+    <section class="locations">
+        <h2 class="section-title">Our Locations</h2>
+        <div class="locations-grid">
+            <!-- Location 1 -->
+            <a href="https://maps.app.goo.gl/gsa89sw4dSF2Xkr69" target="_blank">
+            <div class="location-card">
+                <div class="location-img">
+                    <img src="location.jpg" alt="Cafe">
+                </div>
+                <div class="location-info">
+                    <h3 class="location-name">Valenzuela City</h3>
+                    <p class="location-address">148 Kaypandan St. Canumay West</p>
+                    <p>Open daily: 5pm - 10PM</p>
+                </div>
+            </div>
+            </a>
+        </div>
+    </section>
+
+    
+    <!-- Customer Reviews Section -->
+    <section class="customer-reviews" style="background:#f8f6f2;padding:40px 0;">
+        <div style="max-width:600px;margin:0 auto;">
+            <h2 style="text-align:center;color:#8B5A2B;margin-bottom:18px;">Customer Reviews & Feedback</h2>
+            <form id="review-form" style="background:#fff;padding:24px 18px;border-radius:10px;box-shadow:0 2px 12px #0001;">
+                <div style="margin-bottom:12px;">
+                    <label for="review-name" style="font-weight:bold;">Your Name (optional):</label>
+                    <input type="text" id="review-name" name="review-name" style="width:100%;padding:8px;border-radius:5px;border:1px solid #ccc;">
+                </div>
+                <div style="margin-bottom:12px;">
+                    <label for="review-message" style="font-weight:bold;">Your Review, Concern, or Recommendation:</label>
+                    <textarea id="review-message" name="review-message" rows="4" required style="width:100%;padding:8px;border-radius:5px;border:1px solid #ccc;"></textarea>
+                </div>
+                <button type="submit" class="btn" style="width:100%;">Submit Review</button>
+            </form>
+            <div id="reviews-list" style="margin-top:32px;">
+                <h3 style="color:#8B5A2B;">Recent Reviews</h3>
+                <div id="reviews-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="aboutus.html">Our Business</a></li>
+                    <li><a href="aboutus.html">Our Website</a></li>
+                    <li><a href="aboutus.html">Our Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="https://maps.app.goo.gl/gsa89sw4dSF2Xkr69">Locations</a></li>
+                    <li><a href="customer support.html">Customer Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+
+            </div>
+            <div class="footer-column">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61559575730045&sk=about"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/kayle.brews/"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p style="margin-top: 20px;">Email: kaylebrews@gmail.com</p>
+                <p>Phone: +63 956 2648 664</p>
+            </div>
+        </div>
+        <div class="copyright"></div>
+            <p>&copy; 2024 Kayle Brews. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal-overlay" id="cart-modal">
+        <div class="cart-modal">
+            <span class="close-modal">&times;</span>
+            <h2>Your Cart</h2>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-total">
+                Total: ₱<span id="cart-total">0</span>
+            </div>
+            <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+</body>
+</html>

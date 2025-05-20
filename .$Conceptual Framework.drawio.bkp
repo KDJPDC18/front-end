@@ -1,0 +1,66 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.2 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.2">
+  <diagram name="Page-1" id="ATWdvUvUm69V5RLASsdo">
+    <mxGraphModel dx="1158" dy="749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iNtb6crGxkprzBXKsl2d-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=1" edge="1" parent="1" source="iNtb6crGxkprzBXKsl2d-8" target="iNtb6crGxkprzBXKsl2d-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-8" value="&lt;span&gt;INPUT&lt;/span&gt;" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;swimlaneLine=1;glass=0;" vertex="1" parent="1">
+          <mxGeometry x="15" y="310" width="240" height="280" as="geometry">
+            <mxRectangle x="50" y="310" width="80" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-9" value="- Stakeholder needs &amp;amp; feedback&amp;nbsp;&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;swimlaneLine=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-8">
+          <mxGeometry y="30" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-10" value="- Tech tools (HTML, CSS, JS)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;swimlaneLine=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-8">
+          <mxGeometry y="80" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-11" value="- ISO 25010 criteria&amp;nbsp; &amp;nbsp; &amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;swimlaneLine=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-8">
+          <mxGeometry y="130" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-28" value="- TAM theory guidance&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;swimlaneLine=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-8">
+          <mxGeometry y="180" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-29" value="- Functional requirements (payment, delivery, etc.)&amp;nbsp;&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;swimlaneLine=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-8">
+          <mxGeometry y="220" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=1" edge="1" parent="1" source="iNtb6crGxkprzBXKsl2d-12" target="iNtb6crGxkprzBXKsl2d-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-12" value="&lt;span&gt;PROCESS&lt;/span&gt;" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="310" width="240" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-13" value="- UI/UX design" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-12">
+          <mxGeometry y="30" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-14" value="- Front-end development" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-12">
+          <mxGeometry y="100" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-15" value="- Feature integration (GCash, Add-to-Cart, etc.)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-12">
+          <mxGeometry y="160" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-31" value="- Testing &amp;amp; improvement&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-12">
+          <mxGeometry y="220" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-17" value="&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span&gt;OUTPUT&lt;/span&gt;&lt;/blockquote&gt;" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="595" y="310" width="240" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-18" value="- Functional front-end coffee shop website&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-17">
+          <mxGeometry y="30" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-19" value="- Online ordering and customization features" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-17">
+          <mxGeometry y="100" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-20" value="- Payment and delivery/pick-up options" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-17">
+          <mxGeometry y="160" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iNtb6crGxkprzBXKsl2d-34" value="- Contact info display" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="iNtb6crGxkprzBXKsl2d-17">
+          <mxGeometry y="220" width="240" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

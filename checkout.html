@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Kayle Brews</title>
+    <link rel="stylesheet" href="Prototype2.css">
+    <link rel="stylesheet" href="atmedia.css">
+    <script src="checkout.js" defer></script>
+    <script src="order-backend.js" defer></script>
+</head>
+<body>
+    <div class="checkout-container">
+        <h1 class="checkout-title">Checkout</h1>
+        <div id="step-1" class="checkout-step">
+            <h2>Choose Order Type</h2>
+            <button class="btn" id="delivery-btn">Delivery</button>
+            <button class="btn" id="pickup-btn">Pick-Up</button>
+        </div>
+
+        <div id="step-2-delivery" class="checkout-step hidden">
+            <h2>Choose Payment Method</h2>
+            <button class="btn" id="cash-btn">Cash</button>
+            <button class="btn" id="gcash-btn">GCash</button>
+        </div>
+
+        <div id="step-3-form" class="checkout-step hidden">
+            <h2>Fill Out Your Details</h2>
+            <form id="checkout-form" data-netlify="true">
+                <div class="form-group">
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="tel" id="contact" name="contact" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group hidden" id="address-group">
+                    <label for="address">Complete Address</label>
+                    <textarea id="address" name="address"></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+
+        <div id="step-4-summary" class="checkout-step hidden">
+            <h2>Order Summary</h2>
+            <div id="user-info"></div>
+            <div id="cart-summary"></div>
+        </div>
+    </div>
+</body>
+</html>

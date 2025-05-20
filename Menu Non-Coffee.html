@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Website = Kayle Brews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Prototype2.css">
+    <link rel="stylesheet" href="atmedia.css">
+    <script src="Prototype2.js" defer></script>
+    <script src="Flavor Option.js" defer></script>
+    <script src="locator.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            Free shipping on orders over ₱300
+        </div>
+        <div class="main-header">
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <a href="index.html" class="logo">KAYLE <span>BREWS</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                    <li><a href="customer support.html">Customer Support</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <!-- Sidebar -->
+        <aside class="menu-sidebar1">
+            <ul class="sidebar-list">
+                <li><a href="Menu All Products.html">All Products</a></li>
+                <li><a href="Menu Coffee.html">Coffee</a></li>
+                <li><a href="Menu Non-Coffee.html">Non-Coffee</a></li>
+                <li><a href="Menu Fruit-Soda.html">Fruit Soda</a></li>
+                <li><a href="Menu Snacks.html">Snacks</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="menu-content">
+            <!-- Menu Section -->
+            <a name="menu"></a>
+            <section class="menu1" id="menu">
+                <div class="container">
+                    <h1 class="menu-section-title">Non-Coffee</h1><br>
+
+                    <div class="menu-category">
+                         <div class="menu-items">
+                            <div class="menu-item" data-id="111" data-name="Strawberry Milk" data-img="Strawberry Milk.png" data-price-sm="69" data-price-lg="79" data-price-xl="149" data-desc="Creamy milk with sweet strawberry.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Strawberry Milk.png" alt="Strawberry Milk" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Strawberry Milk</h4>
+                                    <p class="item-desc">Creamy milk with sweet strawberry.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱69</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱149</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱69</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="112" data-name="Blueberry Milk" data-img="Blueberry Milk.png" data-price-sm="69" data-price-lg="79" data-price-xl="149" data-desc="Smooth milk with blueberry flavor.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Blueberry Milk.png" alt="Blueberry Milk" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Blueberry Milk</h4>
+                                    <p class="item-desc">Smooth milk with blueberry flavor.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱69</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱149</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱69</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="113" data-name="Mango Milk" data-img="Mango Milk.png" data-price-sm="69" data-price-lg="79" data-price-xl="149" data-desc="Tropical mango blended with milk.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Mango Milk.png" alt="Mango Milk" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Mango Milk</h4>
+                                    <p class="item-desc">Tropical mango blended with milk.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱69</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱149</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱69</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="114" data-name="Matcha" data-img="Matchaa.png" data-price-sm="69" data-price-lg="79" data-price-xl="149" data-desc="Earthy matcha with creamy milk.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Matchaa.png" alt="Matcha" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Matcha</h4>
+                                    <p class="item-desc">Earthy matcha with creamy milk.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱89</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱159</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱79</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="aboutus.html">Our Business</a></li>
+                    <li><a href="aboutus.html">Our Website</a></li>
+                    <li><a href="aboutus.html">Our Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                    <li><a href="customer support.html">Customer Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+
+            </div>
+            <div class="footer-column">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61559575730045&sk=about"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/kayle.brews/"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p style="margin-top: 20px;">Email: kaylebrews@gmail.com</p>
+                <p>Phone: +63 956 2648 664</p>
+            </div>
+        </div>
+        <div class="copyright"></div>
+            <p>&copy; 2024 Kayle Brews. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal-overlay" id="cart-modal">
+        <div class="cart-modal">
+            <span class="close-modal">&times;</span>
+            <h2>Your Cart</h2>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-total">
+                Total: ₱<span id="cart-total">0</span>
+            </div>
+            <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+</body>
+</html>

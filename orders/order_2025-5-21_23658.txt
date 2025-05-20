@@ -1,0 +1,18 @@
+Order Summary - 21/05/2025, 2:36:58 AM
+
+Customer: dd dd
+Contact: 09776267323
+Email: kendaryll.delacruz81@gmail.com
+Address: asdaw
+Order Type: Pick-Up
+Payment Method: GCash
+
+Items:
+- Iced Latte (Small) x1 (₱79 each)
+   * Add-on: Syrup x1 (₱10 each)
+   * Add-on: Milk x1 (₱10 each)
+- Iced Vanilla (Small) x1 (₱89 each)
+   * Add-on: Syrup x1 (₱10 each)
+   * Add-on: Milk x1 (₱10 each)
+
+Total: ₱168.00

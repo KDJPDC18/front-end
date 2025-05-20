@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Website = Kayle Brews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Prototype2.css">
+    <link rel="stylesheet" href="atmedia.css">
+    <script src="Prototype2.js" defer></script>
+    <script src="Flavor Option.js" defer></script>
+    <script src="locator.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            Free shipping on orders over ₱300
+        </div>
+        <div class="main-header">
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <a href="index.html" class="logo">KAYLE <span>BREWS</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                    <li><a href="customer support.html">Customer Support</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </div>
+            </div>
+        </div>
+    </header>
+
+        <!-- Hero Section -->
+    <section class="hero1">
+        <div class="hero-content1">
+            <h1>Explore Our Products</h1>
+            <p>Enjoy artisanal coffee blends and snacks crafted with care</p>
+            <a href="#menu" class="btn" id="">Check Menu</a>
+        </div>
+    </section>
+
+    <div class="menu-container">
+        <!-- Sidebar -->
+        <aside class="menu-sidebar">
+            <ul class="sidebar-list">
+                <li><a href="Menu All Products.html">All Products</a></li>
+                <li><a href="Menu Coffee.html">Coffee</a></li>
+                <li><a href="Menu Non-Coffee.html">Non-Coffee</a></li>
+                <li><a href="Menu Fruit-Soda.html">Fruit Soda</a></li>
+                <li><a href="Menu Snacks.html">Snacks</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="menu-content">
+            <!-- Menu Section -->
+            <a name="menu"></a>
+            <section class="menu" id="menu">
+                <div class="container">
+                    <h1 class="menu-section-title">Menu</h1>
+                    <h2 class="menu-title" id="coffee">Drinks</h2>
+            
+                    <!-- Coffee Classics -->
+                    <h3 class="category-title">Coffee</h3>
+                    <div class="menu-category">
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="101" data-name="Iced Americano" data-img="Iced Americanoo.png" data-price-sm="49" data-price-lg="59" data-price-xl="129" data-desc="Bold espresso over ice and water.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Iced Americanoo.png" alt="Iced Americano" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Iced Americano</h4>
+                                    <p class="item-desc">Bold espresso over ice and water.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱49</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱59</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱49</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="102" data-name="Iced Latte" data-img="Iced Lattee.png" data-price-sm="59" data-price-lg="69" data-price-xl="139" data-desc="Smooth espresso with creamy milk.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Iced Lattee.png" alt="Iced Latte" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Iced Latte</h4>
+                                    <p class="item-desc">Smooth espresso with creamy milk.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱59</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱69</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱139</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱59</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="103" data-name="Iced Vanilla" data-img="Iced Vanilla.png" data-price-sm="69" data-price-lg="79" data-price-xl="149" data-desc="Classic latte with sweet vanilla.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Iced Vanilla.png" alt="Iced Vanilla" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Iced Vanilla</h4>
+                                    <p class="item-desc">Classic latte with a sweet vanilla.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱69</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱149</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱69</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="104" data-name="Iced Spanish Latte" data-img="Iced Spanish Latte.png" data-price-sm="69" data-price-lg="79" data-price-xl="149" data-desc="Creamy espresso with a sweet twist.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Iced Spanish Latte.png" alt="Iced Spanish Latte" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Iced Spanish Latte</h4>
+                                    <p class="item-desc">Creamy espresso with a sweet twist.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱69</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱149</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱69</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="105" data-name="Iced Caramel" data-img="Iced Caramel.png" data-price-sm="79" data-price-lg="89" data-price-xl="159" data-desc="Espresso with rich caramel flavor.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Iced Caramel.png" alt="Iced Caramel" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Iced Caramel</h4>
+                                    <p class="item-desc">Espresso with rich caramel flavor.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱89</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱159</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱79</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="106" data-name="Iced Salted Caramel" data-img="Iced Salted Caramel.png" data-price-sm="79" data-price-lg="89" data-price-xl="159" data-desc="Sweet and salty caramel latte.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Iced Salted Caramel.png" alt="Iced Salted Caramel" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Iced Salted Caramel</h4>
+                                    <p class="item-desc">Sweet caramel with a hint of salt.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱89</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱159</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱79</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="107" data-name="Iced Mocha" data-price-sm="79" data-img="Iced Mocha.png" data-price-lg="89" data-price-xl="159" data-desc="Espresso blended with chocolate.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Iced Mocha.png" alt="Iced Mocha" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Iced Mocha</h4>
+                                    <p class="item-desc">Espresso blended with chocolate.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱89</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱159</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱79</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="108" data-name="Iced White Chocolate" data-img="Iced White Chocolate.png" data-price-sm="79" data-price-lg="89" data-price-xl="159" data-desc="Sweet white chocolate and espresso.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Iced White Chocolate.png" alt="Iced White Chocolate" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Iced White Chocolate</h4>
+                                    <p class="item-desc">Sweet white chocolate and espresso.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱89</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱159</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱79</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="109" data-name="Iced Hazelnut" data-img="Iced Hazelnut.png" data-price-sm="79" data-price-lg="89" data-price-xl="159" data-desc="Nutty hazelnut with smooth espresso.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Iced Hazelnut.png" alt="Iced Hazelnut" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Iced Hazelnut</h4>
+                                    <p class="item-desc">Nutty hazelnut with smooth espresso.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱89</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱159</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱79</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="110" data-name="Iced Vanilla Sweetcream" data-img="Iced Vanilla Sweetcream.png" data-price-sm="89" data-price-lg="99" data-price-xl="169" data-desc="Vanilla espresso with sweet cream.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Iced Vanilla Sweetcream.png" alt="Iced Vanilla Sweetcream" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Iced Vanilla Sweetcream</h4>
+                                    <p class="item-desc">Vanilla espresso with sweet cream.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱89</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱99</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱169</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱89</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Non-Coffee Drinks -->
+                    <h3 class="category-title" id="non-coffee">Non-Coffee Drinks</h3>
+                    <div class="menu-category">
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="111" data-name="Strawberry Milk" data-img="Strawberry Milk.png" data-price-sm="69" data-price-lg="79" data-price-xl="149" data-desc="Creamy milk with sweet strawberry.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Strawberry Milk.png" alt="Strawberry Milk" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Strawberry Milk</h4>
+                                    <p class="item-desc">Creamy milk with sweet strawberry.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱69</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱149</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱69</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="112" data-name="Blueberry Milk" data-img="Blueberry Milk.png" data-price-sm="69" data-price-lg="79" data-price-xl="149" data-desc="Smooth milk with blueberry flavor.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Blueberry Milk.png" alt="Blueberry Milk" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Blueberry Milk</h4>
+                                    <p class="item-desc">Smooth milk with blueberry flavor.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱69</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱149</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱69</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="113" data-name="Mango Milk" data-img="Mango Milk.png" data-price-sm="69" data-price-lg="79" data-price-xl="149" data-desc="Tropical mango blended with milk.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Mango Milk.png" alt="Mango Milk" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Mango Milk</h4>
+                                    <p class="item-desc">Tropical mango blended with milk.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱69</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱149</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱69</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="114" data-name="Matcha" data-img="Matchaa.png" data-price-sm="69" data-price-lg="79" data-price-xl="149" data-desc="Earthy matcha with creamy milk.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Matchaa.png" alt="Matcha" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Matcha</h4>
+                                    <p class="item-desc">Earthy matcha with creamy milk.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>S - 16oz</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>L - 22oz</span>
+                                            <span>₱89</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱159</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱79</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fruit Soda -->
+                    <h3 class="category-title" id="fruit-soda">Fruit Soda</h3>
+                    <div class="menu-category">
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="115" data-name="Kiwi" data-img="Kiwi.png" data-price-sm="" data-price-lg="" data-price-xl="" data-desc="Fizzy and tangy kiwi soda.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Kiwi.png" alt="Kiwi" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Kiwi</h4>
+                                    <p class="item-desc">Fizzy and tangy kiwi soda.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="large">
+                                            <span>S - 16oz</span>
+                                            <span>₱59</span>
+                                        </div>
+                                        <div>
+                                            
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱59</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="116" data-name="Lychee" data-img="Lychee.png" data-price-sm="" data-price-lg="" data-price-xl="" data-desc="Light and floral lychee soda.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Lychee.png" alt="Lychee" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Lychee</h4>
+                                    <p class="item-desc">Light and floral lychee soda.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="large">
+                                            <span>S - 16oz</span>
+                                            <span>₱59</span>
+                                        </div>
+                                        <div>
+                                            
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱59</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="117" data-name="Honey Peach" data-img="Honey Peach.png" data-price-sm="" data-price-lg="" data-price-xl="" data-desc="Sweet honey and peach fizz.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Honey Peach.png" alt="Honey Peach" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Honey Peach</h4>
+                                    <p class="item-desc">Sweet honey and peach fizz.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="large">
+                                            <span>S - 16oz</span>
+                                            <span>₱59</span>
+                                        </div>
+                                        <div>
+                                            
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱59</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="118" data-name="Green Apple" data-img="Green Apple.png" data-price-sm="" data-img="Green Apple.png" data-price-lg="" data-price-xl="" data-desc="Crisp green apple fizz.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Green Apple.png" alt="Green Apple" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Green Apple</h4>
+                                    <p class="item-desc">Crisp green apple fizz.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="large">
+                                            <span>S - 16oz</span>
+                                            <span>₱59</span>
+                                        </div>
+                                        <div>
+                                            
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱59</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="118" data-name="Lemon" data-img="Lemon.png" data-price-sm="" data-price-lg="" data-price-xl="" data-desc="Bright and zesty lemon soda.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Lemon.png" alt="Lemon" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Lemon</h4>
+                                    <p class="item-desc">Bright and zesty lemon soda.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="large">
+                                            <span>S - 16oz</span>
+                                            <span>₱59</span>
+                                        </div>
+                                        <div>
+                                            
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱59</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="119" data-name="Passion Fruit" data-img="Passion Fruit.png" data-price-sm="" data-price-lg="" data-price-xl="" data-desc="Tropical passion fruit soda.">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Passion Fruit.png" alt="Passion Fruit" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">Passion Fruit</h4>
+                                    <p class="item-desc">Tropical passion fruit soda.</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="large">
+                                            <span>S - 16oz</span>
+                                            <span>₱59</span>
+                                        </div>
+                                        <div>
+                                            
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL - 1L</span>
+                                            <span>₱99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱59</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <h2 class="menu-title" id="snacks">Foods</h2>
+
+                    <!-- Snacks -->
+                    <h3 class="category-title">Snacks</h3>
+                    <div class="menu-category">
+                        <div class="menu-items">
+                            <div class="menu-item" data-id="201" data-name="French Fries" data-price-sm="49" data-price-lg="79" data-price-xl="149" data-desc="Crispy golden fries with your choice of flavor" style="padding: 15px">
+                                <div class="menu-item-img-preview" style="text-align:center; margin-bottom:8px;">
+                                    <img src="Fries.png" alt="Fries" class="menu-item-thumb">
+                                </div>
+                                <div class="item-info">
+                                    <h4 class="item-name">French Fries</h4>
+                                    <p class="item-desc">Crispy golden fries with your choice of flavor</p>
+                                    <div class="size-options">
+                                        <div class="size-option active" data-size="small">
+                                            <span>Small</span>
+                                            <span>₱49</span>
+                                        </div>
+                                        <div class="size-option" data-size="large">
+                                            <span>Large</span>
+                                            <span>₱79</span>
+                                        </div>
+                                        <div class="size-option" data-size="extra-large">
+                                            <span>XL</span>
+                                            <span>₱149</span>
+                                        </div>
+                                    </div>
+                                    <div class="flavor-options">
+                                        <h5>Choose a Flavor:</h5><br>
+                                        <div class="flavor-option active" data-flavor="Cheese">
+                                            <span>Cheese</span>
+                                        </div>
+                                        <div class="flavor-option" data-flavor="Sweetcorn">
+                                            <span>Sweetcorn</span>
+                                        </div>
+                                        <div class="flavor-option" data-flavor="Sourcream">
+                                            <span>Sourcream</span>
+                                        </div>
+                                        <div class="flavor-option" data-flavor="BBQ">
+                                            <span>BBQ</span>
+                                        </div>
+                                        <div class="flavor-option" data-flavor="Chili BBQ">
+                                            <span>Chili BBQ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-item-actions">
+                                    <div class="item-price">₱49</div>
+                                    <button class="add-to-cart-btn-food">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="aboutus.html">Our Business</a></li>
+                    <li><a href="aboutus.html">Our Website</a></li>
+                    <li><a href="aboutus.html">Our Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                    <li><a href="customer support.html">Customer Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+
+            </div>
+            <div class="footer-column">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61559575730045&sk=about"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p style="margin-top: 20px;">Email: kaylebrews@gmail.comj</p>
+                <p>Phone: +63 956 2648 664</p>
+            </div>
+        </div>
+        <div class="copyright"></div>
+            <p>&copy; 2024 Kayle Brews. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal-overlay" id="cart-modal">
+        <div class="cart-modal">
+            <span class="close-modal">&times;</span>
+            <h2>Your Cart</h2>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-total">
+                Total: ₱<span id="cart-total">0</span>
+            </div>
+            <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+</body>
+</html>
