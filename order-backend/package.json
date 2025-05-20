@@ -1,26 +1,16 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0"
-  },
-  "name": "project",
+  "name": "order-backend",
   "version": "1.0.0",
-  "main": "checkout.js",
+  "main": "order-backend.js",
   "scripts": {
   "start": "node order-backend.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KDJ1811/order-backend.git"
-  },
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KDJ1811/order-backend/issues"
-  },
-  "homepage": "https://github.com/KDJ1811/order-backend#readme",
-  "description": ""
-
-  
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
 }

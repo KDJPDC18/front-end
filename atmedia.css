@@ -1,39 +1,42 @@
 @media (max-width: 2000px) {
     .hero {
-        height: 60vh;
+        height: 85vh;
         background-position: center;
-        background-size: cover;
+        background-size: 1600px;
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 55px;
         line-height: 1.2;
     }
 
     .hero p {
-        font-size: 14px;
+        font-size: 20px;
         margin-bottom: 30px;
     }
 
     .hero1 {
-        height: 60vh;
+        height: 85vh;
         background-position: center;
         background-size: cover;
     }
 
     .hero1 h1 {
-        font-size: 30px;
+        font-size: 55px;
         line-height: 1.2;
     }
 
     .hero1 p {
-        font-size: 14px;
+        font-size: 20px;
     }
 
     .hero1 p {
-        font-size: 16px;
+        font-size: 20px;
     }
     
+    #view-menu-btn {
+        font-size: larger;
+    }
 }
 
 @media (max-width: 1400px) {
@@ -83,34 +86,34 @@
     
 
     .hero {
-        height: 60vh;
+        height: 80vh;
         background-position: center;
         background-size: cover;
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 50px;
         line-height: 1.2;
     }
 
     .hero p {
-        font-size: 14px;
+        font-size: 18px;
         margin-bottom: 30px;
     }
 
     .hero1 {
-        height: 60vh;
+        height: 80vh;
         background-position: center;
         background-size: cover;
     }
 
     .hero1 h1 {
-        font-size: 30px;
+        font-size: 50px;
         line-height: 1.2;
     }
 
     .hero1 p {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .hero1 p {
@@ -165,39 +168,36 @@
     
 
     .hero {
-        height: 60vh;
+        height: 75vh;
         background-position: center;
         background-size: cover;
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 46px;
         line-height: 1.2;
     }
 
     .hero p {
-        font-size: 14px;
+        font-size: 17px;
         margin-bottom: 30px;
     }
 
     .hero1 {
-        height: 60vh;
+        height: 75vh;
         background-position: center;
         background-size: cover;
     }
 
     .hero1 h1 {
-        font-size: 30px;
+        font-size: 46px;
         line-height: 1.2;
     }
 
     .hero1 p {
-        font-size: 14px;
+        font-size: 17px;
     }
 
-    .hero1 p {
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 1300px) {
@@ -247,34 +247,34 @@
     
 
     .hero {
-        height: 60vh;
+        height: 75vh;
         background-position: center;
         background-size: cover;
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 46px;
         line-height: 1.2;
     }
 
     .hero p {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 30px;
     }
 
     .hero1 {
-        height: 60vh;
+        height: 75vh;
         background-position: center;
         background-size: cover;
     }
 
     .hero1 h1 {
-        font-size: 30px;
+        font-size: 46px;
         line-height: 1.2;
     }
 
     .hero1 p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .hero1 p {
