@@ -512,34 +512,30 @@ if (!cart.length) {
 }
 
 // After successful checkout and before showing the digital receipt
-const SUPABASE_URL = 'https://qshwxiosvzaajgjcipuu.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzaHd4aW9zdnphYWpnamNpcHV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3OTIwNzksImV4cCI6MjA2MzM2ODA3OX0.6qT7FnaXDY4tw48B8kyu0el9obkJxaFLtyrlgdlb4WU';
 async function sendOrderToBackend(orderData) {
-  try {
-    const { data, error } = await supabase
-      .from('orders') // Replace with your table name
-      .insert([
+    const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm');
+    
+    const supabaseUrl = 'https://qshwxiosvzaajgjcipuu.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzaHd4aW9zdnphYWpnamNpcHV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3OTIwNzksImV4cCI6MjA2MzM2ODA3OX0.6qT7FnaXDY4tw48B8kyu0el9obkJxaFLtyrlgdlb4WU'; // Replace with your anon key
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    const { data, error } = await supabase.from('orders').insert([
         {
-          customer_name: `${orderData.firstname} ${orderData.surname}`,
-          contact_number: orderData.contact,
-          email: orderData.email,
-          address: orderData.address || null,
-          order_type: orderData.orderType,
-          payment_method: orderData.paymentMethod,
-          items: orderData.cart,
-          total_amount: parseFloat(orderData.total),
-          status: 'pending',
-          created_at: new Date().toISOString()
+            customer_name: `${orderData.firstname} ${orderData.surname}`,
+            email: orderData.email,
+            contact_number: orderData.contact,
+            address: orderData.address || null,
+            order_type: orderData.orderType,
+            payment_method: orderData.paymentMethod,
+            items: orderData.cart,
+            total_amount: parseFloat(orderData.total)
         }
-      ]);
-    
-    if (error) throw error;
-    
-    console.log('Order saved to Supabase:', data);
-    return true;
-  } catch (err) {
-    console.error('Error saving order to Supabase:', err);
-    alert('Error saving your order. Please try again or contact support.');
-    return false;
-  }
+    ]);
+
+    if (error) {
+        alert('❌ Failed to save order to Supabase: ' + error.message);
+        console.error(error);
+    } else {
+        console.log('✅ Order saved to Supabase:', data);
+    }
 }
