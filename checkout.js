@@ -10,6 +10,9 @@ if (!cart.length) {
     window.history.back();
 } else {
     document.addEventListener('DOMContentLoaded', () => {
+        const SUPABASE_URL = 'https://qshwxiosvzaajgjcipuu.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzaHd4aW9zdnphYWpnamNpcHV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3OTIwNzksImV4cCI6MjA2MzM2ODA3OX0.6qT7FnaXDY4tw48B8kyu0el9obkJxaFLtyrlgdlb4WU';
+        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         const deliveryBtn = document.getElementById('delivery-btn');
         const pickupBtn = document.getElementById('pickup-btn');
         const cashBtn = document.getElementById('cash-btn');
@@ -23,9 +26,6 @@ if (!cart.length) {
         const userInfo = document.getElementById('user-info');
         const cartSummary = document.getElementById('cart-summary');
         const stepCustomize = document.createElement('div'); // Step for customization
-        const SUPABASE_URL = 'https://qshwxiosvzaajgjcipuu.supabase.co';
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzaHd4aW9zdnphYWpnamNpcHV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3OTIwNzksImV4cCI6MjA2MzM2ODA3OX0.6qT7FnaXDY4tw48B8kyu0el9obkJxaFLtyrlgdlb4WU';
-        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
         let orderType = ''; // Track delivery or pick-up
         let paymentMethod = ''; // Track payment method
