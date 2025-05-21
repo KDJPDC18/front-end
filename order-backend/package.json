@@ -2,15 +2,13 @@
   "name": "order-backend",
   "version": "1.0.0",
   "main": "order-backend.js",
+  "type": "module",
   "scripts": {
-  "start": "node order-backend.js"
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+    "start": "node order-backend.js"
+  },
   "dependencies": {
+    "express": "^4.18.2",
     "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "@supabase/supabase-js": "^2.39.1"
   }
 }
