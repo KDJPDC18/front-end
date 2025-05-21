@@ -510,21 +510,31 @@ if (!cart.length) {
 }
 
 // After successful checkout and before showing the digital receipt
-function sendOrderToBackend(orderData) {
-    fetch('https://backend-rkyn.onrender.com', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(orderData)
-    })
-    .then(res => res.ok ? res.text() : Promise.reject('Failed to save order'))
-    .then(msg => {
-        // Optionally show a message or log
-        console.log(msg);
-    })
-    .catch(err => {
-        alert('Order could not be saved to backend.\n\nMake sure:\n- The backend server is running (node order-backend.js)\n- You are not blocking requests (CORS/network error)\n- The backend is accessible at http://localhost:3001/save-order');
-        console.error(err);
-    });
+async function sendOrderToBackend(orderData) {
+    const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm');
+    
+    const supabaseUrl = 'https://qshwxiosvzaajgjcipuu.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzaHd4aW9zdnphYWpnamNpcHV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3OTIwNzksImV4cCI6MjA2MzM2ODA3OX0.6qT7FnaXDY4tw48B8kyu0el9obkJxaFLtyrlgdlb4WU'; // Replace with your anon key
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    const { data, error } = await supabase.from('orders').insert([
+        {
+            customer_name: `${orderData.firstname} ${orderData.surname}`,
+            email: orderData.email,
+            contact_number: orderData.contact,
+            address: orderData.address || null,
+            order_type: orderData.orderType,
+            payment_method: orderData.paymentMethod,
+            items: orderData.cart,
+            total_amount: parseFloat(orderData.total)
+        }
+    ]);
+
+    if (error) {
+        alert('❌ Failed to save order to Supabase: ' + error.message);
+        console.error(error);
+    } else {
+        console.log('✅ Order saved to Supabase:', data);
+    }
 }
+
