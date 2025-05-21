@@ -513,8 +513,8 @@ if (!cart.length) {
 async function sendOrderToBackend(orderData) {
     const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm');
     
-    const supabaseUrl = 'https://YOUR_PROJECT_ID.supabase.co';
-    const supabaseKey = 'YOUR_ANON_KEY'; // Replace with your anon key
+    const supabaseUrl = 'https://qshwxiosvzaajgjcipuu.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzaHd4aW9zdnphYWpnamNpcHV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3OTIwNzksImV4cCI6MjA2MzM2ODA3OX0.6qT7FnaXDY4tw48B8kyu0el9obkJxaFLtyrlgdlb4WU'; // Replace with your anon key
     const supabase = createClient(supabaseUrl, supabaseKey);
 
     const { data, error } = await supabase.from('orders').insert([
