@@ -1,61 +1,53 @@
-// Simple Node.js backend to save order summary to a txt file
-
 const express = require('express');
-const fs = require('fs');
-const path = require('path');
-const cors = require('cors'); // <-- Add this line
+const { createClient } = require('@supabase/supabase-js');
+const cors = require('cors');
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors()); // <-- Add this line
+// Replace with your Supabase project credentials
+const supabaseUrl = 'https://qshwxiosvzaajgjcipuu.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzaHd4aW9zdnphYWpnamNpcHV1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0Nzc5MjA3OSwiZXhwIjoyMDYzMzY4MDc5fQ.46gYFvNj4f6wDBeRBy4dlzpDMYX7pRMmu5h9o1uehN4'; // Use Service Role Key only on the backend
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+app.use(cors());
 app.use(express.json());
 
-app.post('/save-order', (req, res) => {
+app.post('/save-order', async (req, res) => {
     const order = req.body;
-    const now = new Date();
-    const filename = `order_${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}_${now.getHours()}${now.getMinutes()}${now.getSeconds()}.txt`;
-    const filePath = path.join(__dirname, 'orders', filename);
 
-    // Format order summary as text
-    let content = `Order Summary - ${now.toLocaleString()}\n\n`;
-    content += `Customer: ${order.firstname} ${order.surname}\n`;
-    content += `Contact: ${order.contact}\n`;
-    content += `Email: ${order.email}\n`;
-    if (order.address) content += `Address: ${order.address}\n`;
-    content += `Order Type: ${order.orderType}\n`;
-    content += `Payment Method: ${order.paymentMethod}\n\n`;
-    content += `Items:\n`;
-    order.cart.forEach(item => {
-        content += `- ${item.name} x${item.quantity} (₱${item.price} each)\n`;
-        if (item.addons && item.addons.length) {
-            item.addons.forEach(addon => {
-                content += `   * Add-on: ${addon.name} x${addon.quantity} (₱${addon.price} each)\n`;
-            });
-        }
-    });
-    content += `\nTotal: ₱${order.total}\n`;
-
-    // Ensure orders directory exists
-    fs.mkdir(path.join(__dirname, 'orders'), { recursive: true }, (err) => {
-        if (err) {
-            res.status(500).send('Failed to create directory');
-            return;
-        }
-        fs.writeFile(filePath, content, (err) => {
-            if (err) {
-                res.status(500).send('Failed to save order');
-            } else {
-                res.send('Order saved');
+    try {
+        const { data, error } = await supabase.from('orders').insert([
+            {
+                customer_name: `${order.firstname} ${order.surname}`,
+                email: order.email,
+                contact_number: order.contact,
+                address: order.address || null,
+                order_type: order.orderType,
+                payment_method: order.paymentMethod,
+                items: order.cart,
+                total_amount: parseFloat(order.total),
+                created_at: new Date().toISOString()
             }
-        });
-    });
+        ]);
+
+        if (error) {
+            console.error('❌ Supabase insert error:', error);
+            return res.status(500).json({ message: 'Failed to save order', error: error.message });
+        }
+
+        res.status(200).json({ message: '✅ Order saved to Supabase', data });
+    } catch (err) {
+        console.error('❌ Server error:', err);
+        res.status(500).json({ message: 'Unexpected server error' });
+    }
 });
 
-// Optional: Add a root route for browser GET requests
+// Optional root route
 app.get('/', (req, res) => {
-    res.send('Order backend is running. Use POST /save-order to save an order.');
+    res.send('Backend is connected to Supabase. POST /save-order to submit orders.');
 });
 
 app.listen(PORT, () => {
-    console.log(`Order backend running at http://localhost:${PORT}`);
+    console.log(`✅ Server running at http://localhost:${PORT}`);
 });
