@@ -10,8 +10,7 @@ if (!cart.length) {
     window.history.back();
 } else {
     document.addEventListener('DOMContentLoaded', () => {
-        const SUPABASE_URL = 'https://qshwxiosvzaajgjcipuu.supabase.co';
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzaHd4aW9zdnphYWpnamNpcHV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3OTIwNzksImV4cCI6MjA2MzM2ODA3OX0.6qT7FnaXDY4tw48B8kyu0el9obkJxaFLtyrlgdlb4WU';
+
         const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         const deliveryBtn = document.getElementById('delivery-btn');
         const pickupBtn = document.getElementById('pickup-btn');
@@ -513,6 +512,8 @@ if (!cart.length) {
 }
 
 // After successful checkout and before showing the digital receipt
+const SUPABASE_URL = 'https://qshwxiosvzaajgjcipuu.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzaHd4aW9zdnphYWpnamNpcHV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3OTIwNzksImV4cCI6MjA2MzM2ODA3OX0.6qT7FnaXDY4tw48B8kyu0el9obkJxaFLtyrlgdlb4WU';
 async function sendOrderToBackend(orderData) {
   try {
     const { data, error } = await supabase
