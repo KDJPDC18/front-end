@@ -2,13 +2,25 @@
   "name": "order-backend",
   "version": "1.0.0",
   "main": "order-backend.js",
-  "type": "module",
   "scripts": {
     "start": "node order-backend.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
+    "@supabase/supabase-js": "^2.49.7",
     "cors": "^2.8.5",
-    "@supabase/supabase-js": "^2.39.1"
-  }
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KDJPDC18/backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KDJPDC18/backend/issues"
+  },
+  "homepage": "https://github.com/KDJPDC18/backend#readme",
+  "description": ""
 }
