@@ -10,6 +10,9 @@ if (!cart.length) {
     window.history.back();
 } else {
     document.addEventListener('DOMContentLoaded', () => {
+        const SUPABASE_URL = 'https://qshwxiosvzaajgjcipuu.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzaHd4aW9zdnphYWpnamNpcHV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3OTIwNzksImV4cCI6MjA2MzM2ODA3OX0.6qT7FnaXDY4tw48B8kyu0el9obkJxaFLtyrlgdlb4WU';
+        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         const deliveryBtn = document.getElementById('delivery-btn');
         const pickupBtn = document.getElementById('pickup-btn');
         const cashBtn = document.getElementById('cash-btn');
@@ -510,21 +513,32 @@ if (!cart.length) {
 }
 
 // After successful checkout and before showing the digital receipt
-function sendOrderToBackend(orderData) {
-    fetch('http://localhost:3001/save-order', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(orderData)
-    })
-    .then(res => res.ok ? res.text() : Promise.reject('Failed to save order'))
-    .then(msg => {
-        // Optionally show a message or log
-        console.log(msg);
-    })
-    .catch(err => {
-        alert('Order could not be saved to backend.\n\nMake sure:\n- The backend server is running (node order-backend.js)\n- You are not blocking requests (CORS/network error)\n- The backend is accessible at http://localhost:3001/save-order');
-        console.error(err);
-    });
+async function sendOrderToBackend(orderData) {
+  try {
+    const { data, error } = await supabase
+      .from('orders') // Replace with your table name
+      .insert([
+        {
+          customer_name: `${orderData.firstname} ${orderData.surname}`,
+          contact_number: orderData.contact,
+          email: orderData.email,
+          address: orderData.address || null,
+          order_type: orderData.orderType,
+          payment_method: orderData.paymentMethod,
+          items: orderData.cart,
+          total_amount: parseFloat(orderData.total),
+          status: 'pending',
+          created_at: new Date().toISOString()
+        }
+      ]);
+    
+    if (error) throw error;
+    
+    console.log('Order saved to Supabase:', data);
+    return true;
+  } catch (err) {
+    console.error('Error saving order to Supabase:', err);
+    alert('Error saving your order. Please try again or contact support.');
+    return false;
+  }
 }
